@@ -50,6 +50,17 @@ function CreateLinkForm() {
           Shorten
         </button>
       </form>
+
+      {shortUrl && (
+        <p style={{ marginTop: "20px" }}>
+          Short URL :{" "}
+          <a href={shortUrl} target="_blank" rel="noopener noreferrer">
+            {shortUrl}
+          </a>
+        </p>
+      )}
+
+      {error && <p style={{ color: "red" }}>{error}</p>}
     </div>
   );
 }
