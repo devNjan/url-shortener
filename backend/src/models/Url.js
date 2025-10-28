@@ -7,7 +7,7 @@ const UrlSchema = new Schema({
   owner: { type: Schema.Types.ObjectId, ref: "User", default: null }, // optional
   clicks: { type: Number, default: 0 },
   createdAt: { type: Date, default: Date.now },
-  expiresAt: { type: Date, default: null }, // optional TTL for link
+  expiresAt: { type: Date, default: null },
   passwordHash: { type: String, default: null }, // for protected links (future)
   meta: {
     title: String,
